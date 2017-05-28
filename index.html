@@ -1,0 +1,24 @@
+<p id="d"></p>
+<script type="text/javascript">
+	var output = "A to kanapa pana Kota";
+	output = output.replace(/\s+/g, '');
+	output = output.toLowerCase();
+	var outputLength = output.length;
+
+	function isPalindrom(){
+		for (var i = 0; i < outputLength; i++) {
+			var first = output.charAt(i);
+			var second = output.charAt(outputLength - i - 1);
+
+			if(first != second){
+				document.getElementById("d").innerHTML = "To nie jest palindrom";
+				return;
+			}else{
+				document.getElementById("d").innerHTML = "To jest palindrom";
+			}
+		}
+	}
+
+	isPalindrom();
+
+</script>
